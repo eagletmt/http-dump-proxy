@@ -1,0 +1,19 @@
+[package]
+name = "http-dump-proxy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+clap = { version = "3", features = ["derive"] }
+futures = "0.3"
+http = "0.2"
+hyper = { version = "0.14", features = ["server", "client", "tcp", "stream", "http1", "http2"] }
+hyper-rustls = "0.23"
+listenfd = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+url = "2"
